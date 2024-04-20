@@ -1,0 +1,40 @@
+<section class="section">
+  <div class="container">
+    <article class="row mb-4">
+      <div class="col-lg-10 mx-auto mb-4">
+        <h1 class="h2 mb-3"><%= article.title %></h1>
+        <ul class="list-inline post-meta mb-3">
+          <li class="list-inline-item">
+            <i class="ti-user mr-2"></i
+            ><a href="/?author=<%= article.author.name.replace(" " ,"+") %>"><%= article.author.name %></a>
+          </li>
+          <li class="list-inline-item">
+            Date : <%= new Date(article.createdAt).toLocaleDateString('en-GB')
+            %>
+          </li>
+          <li class="list-inline-item">
+            Category :
+            <a href="/?category=<%= article.category.name.replace(" " ,"+") %>" class="ml-1"><%= article.category.name %></a>
+          </li>
+          <li class="list-inline-item">
+            Tags : <% article.tags.forEach(tag => { %>
+            <a href="/?tag=<%= tag.name.replace(" " ,"+") %>" class="ml-1"><%= tag.name %></a>
+            <% }) %>
+          </li>
+        </ul>
+      </div>
+      <div class="col-12 mb-3">
+        <div class="post-slider">
+          <img
+            src="/images/post/post-1.jpg"
+            class="img-fluid"
+            alt="post-thumb"
+          />
+        </div>
+      </div>
+      <div class="col-lg-10 mx-auto">
+        <div class="content"><%- article.body %></div>
+      </div>
+    </article>
+  </div>
+</section>

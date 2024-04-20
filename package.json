@@ -1,0 +1,21 @@
+{
+  "name": "blog-project",
+  "version": "1.0.0",
+  "description": "Basic blog project with ejs template engine and mongoose.",
+  "type": "module",
+  "main": "app.js",
+  "scripts": {
+    "dev": "nodemon app -e ejs,js,css"
+  },
+  "author": "hb3nce04",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "express-ejs-layouts": "^2.5.1",
+    "mongoose": "^8.1.3",
+    "morgan": "^1.10.0",
+    "nodemon": "^3.0.3"
+  }
+}

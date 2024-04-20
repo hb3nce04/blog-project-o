@@ -1,0 +1,72 @@
+<!-- navigation -->
+<header class="sticky-top bg-white border-bottom border-default">
+  <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-white">
+      <a class="navbar-brand" href="/">
+        <h2>Blog</h2>
+      </a>
+      <button
+        class="navbar-toggler border-0"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navigation"
+      >
+        <i class="ti-menu"></i>
+      </button>
+
+      <div class="collapse navbar-collapse text-center" id="navigation">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/contact">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/author">Author</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/policy">Privacy Policy</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/terms">Terms Conditions</a>
+          </li>
+        </ul>
+
+        <select
+          class="m-2 border-0"
+          id="select-language"
+          onchange="window.location.reload();"
+        >
+          <option id="en" value="english" selected>English</option>
+          <option id="fr" value="hungarian">Magyar</option>
+        </select>
+
+        <!-- search -->
+        <div class="search px-4">
+          <button id="searchOpen" class="search-btn">
+            <i class="ti-search"></i>
+          </button>
+          <div class="search-wrapper">
+            <form action="/api/search" class="h-100" method="POST">
+              <input
+                class="search-box pl-4"
+                id="search-query"
+                name="text"
+                type="search"
+                placeholder="Type &amp; Hit Enter..."
+              />
+            </form>
+            <button id="searchClose" class="search-close">
+              <i class="ti-close text-dark"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+</header>
+<!-- /navigation -->
